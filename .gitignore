@@ -3,3 +3,7 @@
 *.pyc
 env/
 *-env/
+*.egg-info
+MANIFEST.in
+build/
+dist/
