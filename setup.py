@@ -31,14 +31,16 @@ setup(
     ),
     long_description=read('README.md'),
     url='https://github.com/GradConnection/django-datetimezone-field',
-    license='None',
+    license='BSD',
     packages=[
         'datetimezone_field',
     ],
-    install_requires=['django>=1.4.2', 'pytz'],
+    install_requires=['django>=1.5.2', 'pytz', 'django-timezone-field'],
     classifiers=[
+        'Development Status :: 3 - Alpha',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
+        'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Topic :: Utilities',

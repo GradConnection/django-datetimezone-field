@@ -1,10 +1,11 @@
-from django.conf import settings
+from django.conf import settings as _settings
 
 from .widgets import *
 from .fields import *
 
+__version__ = '0.1'
 
-if getattr(settings, 'USE_TZ_FIELDS', False):
+if getattr(_settings, 'USE_TZ_FIELDS', False):
     from django.contrib.admin import options
     from django.db import models
 

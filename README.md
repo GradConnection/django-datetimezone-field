@@ -51,7 +51,9 @@ If using a database that does not support timezone-aware times then the initial 
 
 1. `pip install django-timezone-field`
 2. `pip install django-datetimezone-field`
-3. Add `datetimezone_field` to your `settings.INSTALLED_APPS`:
+3. Add `datetimezone_field` to your `settings.INSTALLED_APPS`
+
+__settings.py__
 
     INSTALLED_APPS = (
         ...
