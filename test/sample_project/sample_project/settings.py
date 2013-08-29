@@ -121,6 +121,7 @@ INSTALLED_APPS = (
     'datetimezone_field',
     'timezone_field',
     'sample_project',
+    'grappelli',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:

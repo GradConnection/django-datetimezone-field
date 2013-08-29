@@ -86,9 +86,9 @@ class AdminSplitTimeTimeZone(SplitTimeTimeZoneWidget):
 
     def format_output(self, rendered_widgets):
 
-        return format_html('<p class="datetime">{0} {1}<br />{2} {3}</p>',
+        return format_html('<p class="datetime">{0} {1} {2}</p>',
                            _('Time:'), rendered_widgets[0],
-                           _('Time Zone:'), rendered_widgets[1])
+                           rendered_widgets[1])
 
 
 class SplitDateTimeTimeZoneWidget(MultiWidget):
@@ -137,8 +137,8 @@ class AdminSplitDateTimeTimeZone(SplitDateTimeTimeZoneWidget):
 
     def format_output(self, rendered_widgets):
 
-        return format_html('<p class="datetime">{0} {1}<br />{2} {3}<br/> {4} {5}</p>',
+        return format_html('<p class="datetime">{0} {1}<br />{2} {3} {4}</p>',
                            _('Date:'), rendered_widgets[0],
                            _('Time:'), rendered_widgets[1],
-                           _('Time Zone:'), rendered_widgets[2])
+                           rendered_widgets[2])
 
