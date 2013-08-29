@@ -29,7 +29,7 @@ setup(
         'A Django app providing database and form fields for '
         'split datetime/time and pytz timezone objects.'
     ),
-    long_description=read('README.md'),
+    long_description=read('README.rst'),
     url='https://github.com/GradConnection/django-datetimezone-field',
     license='BSD',
     packages=[
