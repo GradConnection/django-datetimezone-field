@@ -1,6 +1,8 @@
 django-datetimezone-field
 =========================
 
+`Screenshots`__.
+
 Written on top of `django-timezone-field`__.
 
 A Django app providing database and form fields for split datetime/time and pytz timezone objects.
@@ -96,6 +98,7 @@ Credits
 
 Built on top of `Mike Fogel's django-timezone-field`__.
 
+__ https://github.com/GradConnection/django-datetimezone-field/wiki/Screenshots
 __ https://github.com/mfogel/django-timezone-field/
 __ http://pypi.python.org/pypi/django-datetimezone-field/
 __ http://www.pip-installer.org/
