@@ -1,7 +1,7 @@
 django-datetimezone-field
 =========================
 
-`Screenshots`__.
+Here is `how it looks like`__.
 
 Written on top of `django-timezone-field`__.
 
