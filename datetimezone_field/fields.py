@@ -44,6 +44,8 @@ class SplitTimeTimeZoneField(MultiValueField):
 
     def compress(self, data_list):
         if data_list:
+            if data_list[0] in self.empty_values
+                return None
             # Raise a validation error if time or date is empty
             # (possible if SplitTimeTimeZoneField has required=False).
             if data_list[0] in self.empty_values:
@@ -86,6 +88,8 @@ class SplitDateTimeTimeZoneField(MultiValueField):
 
     def compress(self, data_list):
         if data_list:
+            if data_list[0] in self.empty_values and data_list[1] in self.empty_values
+                return None
             # Raise a validation error if time or date is empty
             # (possible if SplitDateTimeTimeZoneField has required=False).
             if data_list[0] in self.empty_values:
