@@ -3,7 +3,7 @@ from django.conf import settings as _settings
 from .widgets import *
 from .fields import *
 
-__version__ = '0.1.5'
+__version__ = '0.1.6'
 
 if getattr(_settings, 'USE_TZ_FIELDS', False):
     from django.contrib.admin import options
