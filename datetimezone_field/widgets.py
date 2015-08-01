@@ -71,7 +71,6 @@ class SplitHiddenTimeTimeZoneWidget(SplitTimeTimeZoneWidget):
         super(SplitHiddenTimeTimeZoneWidget, self).__init__(attrs, time_format)
         for widget in self.widgets:
             widget.input_type = 'hidden'
-            widget.is_hidden = True
 
 
 class AdminSplitTimeTimeZone(SplitTimeTimeZoneWidget):
@@ -121,7 +120,6 @@ class SplitHiddenDateTimeTimeZoneWidget(SplitDateTimeTimeZoneWidget):
         super(SplitHiddenDateTimeTimeZoneWidget, self).__init__(attrs, date_format, time_format)
         for widget in self.widgets:
             widget.input_type = 'hidden'
-            widget.is_hidden = True
 
 
 class AdminSplitDateTimeTimeZone(SplitDateTimeTimeZoneWidget):
