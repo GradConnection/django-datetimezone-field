@@ -102,3 +102,13 @@ class SplitDateTimeTimeZoneField(MultiValueField):
             return result
         return None
 
+    def _has_changed(self, initial, data):
+        # TimeZoneFormField._has_changed returns True always here, so we rely solely
+        # on the other fields.
+        if initial is None:
+            initial = ['' for x in range(0, len(data))]
+        else:
+            if not isinstance(initial, list):
+                initial = self.widget.decompress(initial)
+        return (self.fields[0]._has_changed(initial[0], data[0]) or
+                self.fields[1]._has_changed(initial[1], data[1]))
