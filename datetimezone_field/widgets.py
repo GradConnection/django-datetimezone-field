@@ -5,7 +5,7 @@ import decimal
 from django.forms.widgets import Select, MultiWidget, DateInput, TimeInput
 from django.contrib.admin.widgets import AdminDateWidget, AdminTimeWidget
 from django.utils.html import format_html
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 from django.utils import timezone
 from django.conf import settings
 
