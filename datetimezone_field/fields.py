@@ -52,8 +52,9 @@ class SplitTimeTimeZoneField(MultiValueField):
                 raise ValidationError(self.error_messages['invalid_time'], code='invalid_time')
             if data_list[1] in self.empty_values:
                 raise ValidationError(self.error_messages['invalid_time_zone'], code='invalid_time_zone')
-            result = data_list[0].replace(tzinfo=data_list[1])
-            return result
+
+            return data_list[1].localize(data_list[0])
+
         return None
 
 
@@ -98,8 +99,8 @@ class SplitDateTimeTimeZoneField(MultiValueField):
                 raise ValidationError(self.error_messages['invalid_time'], code='invalid_time')
             if data_list[2] in self.empty_values:
                 raise ValidationError(self.error_messages['invalid_time_zone'], code='invalid_time_zone')
-            result = datetime.datetime.combine(*data_list[0:2]).replace(tzinfo=data_list[2])
-            return result
+            return data_list[2].localize(datetime.datetime.combine(*data_list[0:2]))
+
         return None
 
     def _has_changed(self, initial, data):
