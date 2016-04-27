@@ -109,6 +109,22 @@ class SplitDateTimeTimeZoneWidget(MultiWidget):
             return [value.date(), value.time().replace(microsecond=0), tzinfo]
         return [None, None, tzinfo]
 
+    def value_from_datadict(self, data, files, name):
+        """
+        account for the fact that the timezone widget always returns a value (the default)
+        even without interaction, and with a blank date and time, it doesn't make sense
+        """
+        value_list = MultiWidget.value_from_datadict(self, data, files, name)
+
+        DATE_INDEX = 0
+        TIME_INDEX = 1
+        TZ_INDEX = 2
+
+        if not value_list[DATE_INDEX] and not value_list[TIME_INDEX]:
+            value_list[TZ_INDEX] = u''
+
+        return value_list
+
 
 class SplitHiddenDateTimeTimeZoneWidget(SplitDateTimeTimeZoneWidget):
     """
