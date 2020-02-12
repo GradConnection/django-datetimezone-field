@@ -102,7 +102,7 @@ __ https://github.com/GradConnection/django-datetimezone-field/wiki/Screenshots
 __ https://github.com/mfogel/django-timezone-field/
 __ http://pypi.python.org/pypi/django-datetimezone-field/
 __ http://www.pip-installer.org/
-__ https://github.com/mfogel/django-datetimezone-field/
+__ https://github.com/GradConnection/django-datetimezone-field/
 __ https://github.com/mfogel/django-timezone-field/
 
 
