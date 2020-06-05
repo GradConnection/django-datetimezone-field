@@ -1,4 +1,4 @@
-Django==1.11.28
+Django==1.11.29
 django-grappelli==2.4.6
 django-timezone-field==1.0
 pytz==2013b
